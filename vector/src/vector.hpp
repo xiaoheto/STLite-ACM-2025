@@ -17,7 +17,7 @@ class vector
 {
 public:
 	/**
-	 * TODO
+	 *
 	 * a type for actions of the elements of a vector, and you should write
 	 *   a class named const_iterator with same interfaces.
 	 */
@@ -48,7 +48,7 @@ public:
 		T *ptr;
 		vector<T> *container;//指向T类型数组的指针
 		/**
-		 * TODO add data members
+		 *  add data members
 		 *   just add whatever you want.
 		 */
 	public:
@@ -60,12 +60,12 @@ public:
 		iterator operator+(const int &n) const
 		{
 			return iterator(ptr + n,container);
-			//TODO
+			//
 		}
 		iterator operator-(const int &n) const
 		{
 			return iterator(ptr - n,container);
-			//TODO
+			//
 		}
 		// return the distance between two iterators,
 		// if these two iterators point to different vectors, throw invaild_iterator.
@@ -75,22 +75,22 @@ public:
 				throw invalid_iterator();
 			}
 			return ptr - rhs.ptr;
-			//TODO
+			//
 		}
 		iterator& operator+=(const int &n)
 		{
 			ptr += n;
 			return *this;
-			//TODO
+			//
 		}//修改现有对象
 		iterator& operator-=(const int &n)
 		{
 			ptr -= n;
 			return *this;
-			//TODO
+			//
 		}
 		/**
-		 * TODO iter++
+		 *  iter++
 		 */
 		iterator operator++(int) {
 			iterator temp = *this;
@@ -98,14 +98,14 @@ public:
 			return temp;
 		}
 		/**
-		 * TODO ++iter
+		 *  ++iter
 		 */
 		iterator& operator++() {
 			ptr += 1;
 			return *this;
 		}
 		/**
-		 * TODO iter--
+		 *  iter--
 		 */
 		iterator operator--(int) {
 			iterator temp = *this;
@@ -113,14 +113,14 @@ public:
 			return temp;
 		}
 		/**
-		 * TODO --iter
+		 *  --iter
 		 */
 		iterator& operator--() {
 			ptr -= 1;
 			return *this;
 		}
 		/**
-		 * TODO *it
+		 *  *it
 		 */
 		T& operator*() const {
 			return *ptr;
@@ -139,7 +139,7 @@ public:
 		}
 	};
 	/**
-	 * TODO
+	 *
 	 * has same function as iterator, just for a const object.
 	 */
 	class const_iterator {
@@ -153,7 +153,7 @@ public:
 	private:
 		T *ptr;
 		const vector<T> *container;//指向T类型数组的指针
-		/*TODO*/
+		/**/
 	public:
 		const_iterator(T *p,const vector<T> *con):ptr(p),container(con){}
 		/**
@@ -163,12 +163,12 @@ public:
 		const_iterator operator+(const int &n) const
 		{
 			return const_iterator(ptr + n,container);
-			//TODO
+			//
 		}
 		const_iterator operator-(const int &n) const
 		{
 			return const_iterator(ptr - n,container);
-			//TODO
+			//
 		}
 		// return the distance between two iterators,
 		// if these two iterators point to different vectors, throw invaild_iterator.
@@ -178,22 +178,22 @@ public:
 				throw invalid_iterator();
 			}
 			return ptr - rhs.ptr;
-			//TODO
+			//
 		}
 		const_iterator& operator+=(const int &n)
 		{
 			ptr += n;
 			return *this;
-			//TODO
+			//
 		}//修改现有对象
 		const_iterator& operator-=(const int &n)
 		{
 			ptr -= n;
 			return *this;
-			//TODO
+			//
 		}
 		/**
-		 * TODO iter++
+		 *  iter++
 		 */
 		const_iterator operator++(int) {
 			const_iterator temp = *this;
@@ -201,14 +201,14 @@ public:
 			return temp;
 		}
 		/**
-		 * TODO ++iter
+		 *  ++iter
 		 */
 		const_iterator& operator++() {
 			ptr += 1;
 			return *this;
 		}
 		/**
-		 * TODO iter--
+		 *  iter--
 		 */
 		const_iterator operator--(int) {
 			const_iterator temp = *this;
@@ -216,14 +216,14 @@ public:
 			return temp;
 		}
 		/**
-		 * TODO --iter
+		 *  --iter
 		 */
 		const_iterator& operator--() {
 			ptr -= 1;
 			return *this;
 		}
 		/**
-		 * TODO *it
+		 *  *it
 		 */
 		T& operator*() const {
 			return *ptr;
@@ -257,7 +257,7 @@ private:
 	}
 public:
 	/**
-	 * TODO Constructs
+	 *  Constructs
 	 * At least two: default constructor, copy constructor
 	 */
 	vector():data(nullptr),size_(0),capacity(0) {}
@@ -268,14 +268,14 @@ public:
 		}
 	}
 	/**
-	 * TODO Destructor
+	 *  Destructor
 	 */
 	~vector() {
 		clear();
 		::operator delete(data);
 	}
 	/**
-	 * TODO Assignment operator
+	 *  Assignment operator
 	 */
 	vector &operator=(const vector &other) {
 		if (this == &other) {
