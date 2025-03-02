@@ -81,7 +81,6 @@ public:
 		{
 			ptr += n;
 			return *this;
-			//
 		}//修改现有对象
 		iterator& operator-=(const int &n)
 		{
@@ -246,12 +245,12 @@ private:
 	size_t size_;//数组中元素个数
 	size_t capacity;//数组的容量大小
 	void resize(size_t new_capacity) {
-		T* new_data = static_cast<T*>(::operator new(sizeof(T) * new_capacity));
+		T* new_data = static_cast<T*>(::operator new(sizeof(T) * new_capacity));//分配原始内存
 		for (size_t i = 0; i < size_; ++i) {
-			new(&new_data[i]) T(std::move(data[i]));
-			data[i].~T();
+			new(&new_data[i]) T(std::move(data[i]));//使用placement new在已经分配的内存上构造对象
+			data[i].~T();//显式调用T的析构函数
 		}
-		::operator delete(data);
+		::operator delete(data);//释放内存
 		data = new_data;
 		capacity = new_capacity;
 	}
@@ -282,7 +281,7 @@ public:
 			return *this;
 		}
 		clear();
-		if (capacity < other.size_) {
+		if (capacity != other.size_) {
 			resize(other.size_);
 		}
 		for (size_t i = 0; i < other.size_; ++i) {
