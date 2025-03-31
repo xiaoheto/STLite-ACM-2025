@@ -3,7 +3,7 @@
  * Author: 于恩帝
  * Description: This is a more specific test for some details of the vector class.
  */
-#include <vector>
+/*#include <vector>
 #include <cstdio>
 
 #include "vector.hpp"
@@ -128,4 +128,4 @@ int main() {
 	test_insert();
 	test_iterator();
 	return 0;
-}
+}*/

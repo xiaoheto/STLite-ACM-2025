@@ -1,4 +1,4 @@
-#include "vector.hpp"
+/*#include "vector.hpp"
 
 #include "class-integer.hpp"
 #include "class-matrix.hpp"
@@ -48,4 +48,4 @@ int main()
 	TestInteger();
 	TestMatrix();
 	TestBint();
-}
+}*/

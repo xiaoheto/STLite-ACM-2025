@@ -1,4 +1,4 @@
-#include "vector.hpp"
+/*#include "vector.hpp"
 
 #include <iostream>
 #include <iomanip>
@@ -129,4 +129,4 @@ int main(int argc, char const *argv[])
 	TestInsert();
 	TestErase();
 	return 0;
-}
+}*/

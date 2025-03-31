@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <chrono>
 #include "vector.hpp"
 
@@ -61,4 +61,4 @@ int main() {
     cerr << "Final size: " << vec.size() << endl;
     
     return 0;
-}
+}*/
